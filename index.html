@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff69b4;
+        }
+        p {
+            font-size: 1.5em;
+            color: #ff1493;
+        }
+        .balloons {
+            margin-top: 50px;
+        }
+        .balloon {
+            display: inline-block;
+            margin: 20px;
+            width: 100px;
+            height: 150px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            position: relative;
+        }
+        .balloon::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 100px;
+            background-color: #ff1493;
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Jojo!</h1>
+    <p>Wishing you all the best on your special day!</p>
+    <div class="balloons">
+        <div class="balloon" style="background-color: #ff69b4;"></div>
+        <div class="balloon" style="background-color: #ff1493;"></div>
+        <div class="balloon" style="background-color: #ff6347;"></div>
+    </div>
+</body>
+</html>
