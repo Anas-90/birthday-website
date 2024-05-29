@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            position: relative;
         }
         h1 {
             font-size: 4em;
@@ -55,6 +55,16 @@
             left: 40%;
             animation-delay: 4s;
         }
+        .balloon:nth-child(4) {
+            background-color: #ff69b4;
+            left: 60%;
+            animation-delay: 6s;
+        }
+        .balloon:nth-child(5) {
+            background-color: #ff1493;
+            left: 80%;
+            animation-delay: 8s;
+        }
         .balloon::after {
             content: '';
             display: block;
@@ -75,6 +85,48 @@
             50% { transform: translateY(-50px); }
             100% { transform: translateY(0); }
         }
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: move 20s linear infinite;
+        }
+        .cloud:nth-child(1) {
+            width: 200px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-duration: 25s;
+        }
+        .cloud:nth-child(2) {
+            width: 250px;
+            height: 125px;
+            top: 40%;
+            left: 60%;
+            animation-duration: 30s;
+        }
+        .cloud:nth-child(3) {
+            width: 150px;
+            height: 75px;
+            top: 60%;
+            left: 30%;
+            animation-duration: 20s;
+        }
+        @keyframes move {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
     </style>
 </head>
 <body>
@@ -87,6 +139,12 @@
         <div class="balloon" style="left: 70%;"></div>
         <div class="balloon" style="left: 90%;"></div>
     </div>
+    <div class="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
 </body>
 </html>
+
 
