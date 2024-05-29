@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff69b4;
+            margin-top: 100px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 2em;
+            color: #ff1493;
+            animation: fadeIn 3s ease-in-out;
+        }
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .balloon {
+            display: inline-block;
+            position: absolute;
+            bottom: -150px;
+            width: 100px;
+            height: 150px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        .balloon:nth-child(2) {
+            background-color: #ff1493;
+            left: 20%;
+            animation-delay: 2s;
+        }
+        .balloon:nth-child(3) {
+            background-color: #ff6347;
+            left: 40%;
+            animation-delay: 4s;
+        }
+        .balloon::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 100px;
+            background-color: inherit;
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy 19th Birthday, Jojo!</h1>
+    <p>Wishing you all the best on your special day!</p>
+    <div class="balloons">
+        <div class="balloon" style="left: 10%;"></div>
+        <div class="balloon" style="left: 30%;"></div>
+        <div class="balloon" style="left: 50%;"></div>
+        <div class="balloon" style="left: 70%;"></div>
+        <div class="balloon" style="left: 90%;"></div>
+    </div>
+</body>
+</html>
